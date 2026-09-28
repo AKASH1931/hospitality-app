@@ -28,7 +28,7 @@ class AppTheme {
         titleTextStyle: GoogleFonts.plusJakartaSans(
           fontSize: 20, fontWeight: FontWeight.w800, color: ink),
       ),
-      cardTheme: CardThemeData(
+      cardTheme: CardTheme(
         color: Colors.white,
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -54,12 +54,6 @@ class AppTheme {
         labelTextStyle: WidgetStatePropertyAll(
           GoogleFonts.plusJakartaSans(fontSize: 12, fontWeight: FontWeight.w600),
         ),
-      ),
-      pageTransitionsTheme: const PageTransitionsTheme(
-        builders: {
-          TargetPlatform.android: PredictiveBackPageTransitionsBuilder(),
-          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-        },
       ),
     );
   }
