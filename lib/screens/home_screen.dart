@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   IconData _iconFor(String c) {
     switch (c) {
-      case 'Chef': return Icons.chef_hat_rounded;
+      case 'Chef': return Icons.restaurant_menu_rounded;
       case 'Waiter': return Icons.room_service_rounded;
       case 'Bartender': return Icons.local_bar_rounded;
       case 'Housekeeping': return Icons.cleaning_services_rounded;
