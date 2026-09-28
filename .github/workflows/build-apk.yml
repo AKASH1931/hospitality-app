@@ -1,0 +1,32 @@
+name: Build Demo APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.24.0
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: luxero-debug-keystore-v1
+
+      - run: |
+          if [ ! -d "android" ]; then flutter create --org com.luxero --project-name hospitality_app .; fi
+          flutter pub get
+          flutter build apk --debug --build-name=1.0.${{ github.run_number }} --build-number=${{ github.run_number }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hospitality-app-demo
+          path: build/app/outputs/flutter-apk/app-debug.apk
