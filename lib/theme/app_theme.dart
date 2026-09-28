@@ -28,7 +28,7 @@ class AppTheme {
         titleTextStyle: GoogleFonts.plusJakartaSans(
           fontSize: 20, fontWeight: FontWeight.w800, color: ink),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: Colors.white,
         elevation: 0,
         shape: RoundedRectangleBorder(
