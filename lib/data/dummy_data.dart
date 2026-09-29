@@ -10,6 +10,16 @@ const List<String> categories = [
   'Manager',
 ];
 
+// District-style category header images
+const Map<String, String> categoryImages = {
+  'Chef': 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=60',
+  'Waiter': 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=60',
+  'Bartender': 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=400&q=60',
+  'Housekeeping': 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&q=60',
+  'Decor': 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=400&q=60',
+  'Manager': 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=400&q=60',
+};
+
 const List<Worker> dummyWorkers = [
   Worker(
     id: 'w1',
@@ -23,6 +33,7 @@ const List<Worker> dummyWorkers = [
     skills: ['North Indian', 'Tandoor', 'Banquet'],
     isAvailable: true,
     about: '8 saal ka banquet aur wedding experience. 500+ events me kaam.',
+    imageUrl: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=60',
   ),
   Worker(
     id: 'w2',
@@ -36,6 +47,7 @@ const List<Worker> dummyWorkers = [
     skills: ['Continental', 'Desserts', 'Live Counter'],
     isAvailable: true,
     about: '5-star hotel trained. Live counters aur plated dinners expert.',
+    imageUrl: 'https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=800&q=60',
   ),
   Worker(
     id: 'w3',
@@ -49,6 +61,7 @@ const List<Worker> dummyWorkers = [
     skills: ['Service', 'Buffet', 'Bar Support'],
     isAvailable: true,
     about: 'Wedding aur corporate events me fast service.',
+    imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=60',
   ),
   Worker(
     id: 'w4',
@@ -62,6 +75,7 @@ const List<Worker> dummyWorkers = [
     skills: ['Cocktails', 'Mocktails', 'Flair'],
     isAvailable: false,
     about: 'Cocktail menu design + live bar setup.',
+    imageUrl: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=60',
   ),
   Worker(
     id: 'w5',
@@ -75,6 +89,7 @@ const List<Worker> dummyWorkers = [
     skills: ['Rooms', 'Event Cleanup', 'Linen'],
     isAvailable: true,
     about: 'Event ke pehle aur baad me full cleanup team ke saath.',
+    imageUrl: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=60',
   ),
   Worker(
     id: 'w6',
@@ -88,6 +103,7 @@ const List<Worker> dummyWorkers = [
     skills: ['Wedding Stage', 'Floral', 'Lighting'],
     isAvailable: true,
     about: 'Wedding, haldi, reception stage + entry decor. Portfolio on demand.',
+    imageUrl: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=60',
   ),
   Worker(
     id: 'w7',
@@ -101,6 +117,7 @@ const List<Worker> dummyWorkers = [
     skills: ['Team Lead', 'Vendor Coord', 'Billing'],
     isAvailable: true,
     about: 'Poora event staff manage karunga - attendance se payment tak.',
+    imageUrl: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=60',
   ),
   Worker(
     id: 'w8',
@@ -114,5 +131,6 @@ const List<Worker> dummyWorkers = [
     skills: ['Welcome', 'Serving', 'Hygiene'],
     isAvailable: true,
     about: 'Polite service, hotel grooming standards.',
+    imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=60',
   ),
 ];

@@ -10,6 +10,7 @@ class Worker {
   final List<String> skills;
   final bool isAvailable;
   final String about;
+  final String imageUrl;
 
   const Worker({
     required this.id,
@@ -23,5 +24,6 @@ class Worker {
     required this.skills,
     required this.isAvailable,
     required this.about,
+    required this.imageUrl,
   });
 }
