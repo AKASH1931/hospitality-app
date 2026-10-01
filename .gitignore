@@ -22,3 +22,8 @@ hospitality_app/
 github/
 hospitality_app.zip
 Luxero-App-Handoff.pdf
+
+# Stray root uploads (correct paths are lib/main.dart etc.)
+/build-apk.yml
+/home_screen.dart
+/main.dart

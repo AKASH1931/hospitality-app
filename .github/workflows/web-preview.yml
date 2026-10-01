@@ -1,0 +1,31 @@
+name: Web Preview
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Build web
+        run: |
+          if [ ! -d "web" ]; then flutter create --org com.luxero --project-name hospitality_app .; fi
+          flutter pub get
+          flutter build web --release --base-href /hospitality-app/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
